@@ -36,7 +36,7 @@ Obtenha o ip do contêiner do mysql:
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mysql
 
 Execute o contêiner da aplicação, passando pra variável de ambiente DB_HOST o ip obtido do contêiner do mysql:
-docker run -p 3001:3001 -e DB_HOST=172.17.0.2 --name myapp -d eduardorossetti/myapp:latest
+docker run -p 3001:3001 -e DB_HOST=172.17.0.2 --name myapp -d jaovictor/myapp:latest
 
 - Abra a URL http://localhost:3001/consulta-dados
 - Abra a URL http://localhost:3001/liveness
